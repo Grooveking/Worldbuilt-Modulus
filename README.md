@@ -1,12 +1,10 @@
-Ts is built off of Worldbuilt: Unbound and I haven't changed anything in here yet...
-
-### To install Modulus open the Install_Modulus.bat file
-
 # Worldbuilt: Modulus
 
 An unofficial mod loader for **Worldbuilt**.
 
 Worldbuilt: Modulus adds an in-game mod menu and supports ZIP entrypoint mods and PCK patch mods without distributing a modified copy of the game.
+
+This is a fork of Worldbuilt: Unbound... and I can't lie these md files are probably partially written by AI, BUT for your information I did not make this md it comes from the original Unbound project.
 
 ## Current Version
 
@@ -26,6 +24,8 @@ Worldbuilt: Modulus adds an in-game mod menu and supports ZIP entrypoint mods an
 - Manifest and entrypoint validation
 - PowerShell installer and uninstaller
 - Existing mods are preserved during uninstall
+- A cool subtitle that says Modulus under Worldbuilt! Plus the creator of Worldbuilt made the art for it!!! *Cause I'm buns at art*
+- The buttons hover like the Worlbuilt buttons
 
 ## Requirements
 
@@ -35,15 +35,9 @@ Worldbuilt: Modulus adds an in-game mod menu and supports ZIP entrypoint mods an
 
 ## Installation
 
-Open PowerShell in the repository folder and run:
+Open the Install_Modulus.bat file provided in the zip, and in the terminal paste the path/to/your/executable in the line where it asks for it.
 
-```powershell
-powershell -ExecutionPolicy Bypass `
-  -File .\installer\install.ps1 `
-  -GameDirectory "C:\Path\To\Worldbuilt"
-```
-
-The selected folder must contain the Worldbuilt executable.
+The selected folder must contain the Worldbuilt executable!
 
 ## Installing Mods
 
@@ -76,6 +70,8 @@ ExampleMod.zip
 
 ### PCK Patch Mods
 
+**Careful using this type of mod for it is not being actively supported... Basically I'm a little lazy and Entrypoint mods are way better.**
+
 ```text
 ExamplePatch.pck
 ExamplePatch.json
@@ -84,6 +80,8 @@ ExamplePatch.json
 PCK patch mods can replace existing game resources and may conflict with other patch mods.
 
 See [`docs/MODDING.md`](docs/MODDING.md) for the full format.
+
+Note to self: I should edit the MODDING.md file eventually, but for now it represents how modding works fine.
 
 ## Uninstallation
 
@@ -101,10 +99,10 @@ The loader is removed, but the `mods` folder is preserved.
 - Mods cannot be unloaded while the game is running.
 - Patch mods may conflict when replacing the same resource.
 - There is no dependency resolver yet.
-- There is no graphical installer yet.
+- There is no graphical installer yet. But there's a installer file now!
 
 ## Disclaimer
 
-Worldbuilt: Modulus is an unofficial community project and is not affiliated with or endorsed by the developer of Worldbuilt.
+Worldbuilt: Modulus is an unofficial community project and is definitely affiliated with the developers of Worldbuilt, He's my friend after all :p
 
-Back up save files before testing unfinished mods.
+Back up save files before testing unfinished mods. If you even know where the save files are haha.
