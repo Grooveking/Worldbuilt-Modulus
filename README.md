@@ -4,7 +4,7 @@ An unofficial mod loader for **Worldbuilt**.
 
 Worldbuilt: Modulus adds an in-game mod menu and supports ZIP entrypoint mods and PCK patch mods without distributing a modified copy of the game.
 
-This is a fork of Worldbuilt: Unbound... and I can't lie these md files are probably partially written by AI, BUT for your information I did not make this md it comes from the original Unbound project.
+This is a fork of Worldbuilt: Unbound! I haven't gotten to fully rewriting the md files.
 
 ## Current Version
 
@@ -12,6 +12,7 @@ This is a fork of Worldbuilt: Unbound... and I can't lie these md files are prob
 
 ## Features
 
+- Compatible with linux and windows
 - In-game Mods menu
 - Enable and disable installed mods
 - Persistent enabled states
@@ -24,20 +25,32 @@ This is a fork of Worldbuilt: Unbound... and I can't lie these md files are prob
 - Manifest and entrypoint validation
 - PowerShell installer and uninstaller
 - Existing mods are preserved during uninstall
-- A cool subtitle that says Modulus under Worldbuilt! Plus the creator of Worldbuilt made the art for it!!! *Cause I'm buns at art*
+- A cool subtitle that says Modulus under Worldbuilt! Plus the creator of Worldbuilt made the art for it!!! *Cause I'm not great at art*
 - The buttons hover like the Worlbuilt buttons
 
 ## Requirements
 
-- Windows
-- Worldbuilt Alpha 0.2.3 (Available on Itch.io)
+- Windows or Linux
+- Worldbuilt Alpha ver. 0.2.3 or ver. 0.3.0 (Available on Itch.io)
 - Mods built for a compatible Godot version
 
-## Installation
+**Linux Extra Requirements**
+- Powershell (pwsh)
+- The permission to run shell files
 
-Open the Install_Modulus.bat file provided in the zip, and in the terminal paste the path/to/your/executable in the line where it asks for it.
+## Windows Installation
+
+Open the Install_Modulus.bat file provided in the zip, and in the terminal paste the path to your executable if it asks
 
 The selected folder must contain the Worldbuilt executable!
+
+## Linux Installation
+
+Open the install.sh file (As a program not as a text file)
+Then paste the path to your executable if it asks
+
+Note: If you get warned that Powershell is not installed then get it installed!
+See troubleshooting if you still can't get it to install
 
 ## Installing Mods
 
@@ -81,9 +94,8 @@ PCK patch mods can replace existing game resources and may conflict with other p
 
 See [`docs/MODDING.md`](docs/MODDING.md) for the full format.
 
-Note to self: I should edit the MODDING.md file eventually, but for now it represents how modding works fine.
-
 ## Uninstallation
+**THIS DOES NOT WORK JUST DELETE EVERYTHING EXCEPT THE EXECTUABLE AND THAT WORKS AS UNINSTALLING**
 
 ```powershell
 powershell -ExecutionPolicy Bypass `
@@ -101,8 +113,27 @@ The loader is removed, but the `mods` folder is preserved.
 - There is no dependency resolver yet.
 - There is no graphical installer yet. But there's a installer file now!
 
+## Troubleshooting
+If your on windows or linux and cannot get the install_modulus.bat or install.sh files to work you can run the the main install file manually, here's how:
+
+- Go into the installer folder and right click, then open in terminal. (or you can use cd in terminal)
+- type ./install.ps1 and if your on windows it should just run, if your on linux make sure you have powershell installed.
+
+### In the case you don't have permissions to run powershell commands
+You can just manually drag the files to your worldbuilt install actually!
+- Drag the addons folder and the override.cfg file located inside of payload into the folder containing your worldbuilt executable.
+- Then create a new folder inside your folder with the executable called "mods". This is the folder where you can place the zip mods (or pck mod).
+
+```text
+Folder-with-Executable
+├── WorldbuiltAlpha.exe
+├── mods/
+├── addons/
+└── override.cfg
+```
+
 ## Disclaimer
 
-Worldbuilt: Modulus is an unofficial community project and is definitely affiliated with the developers of Worldbuilt, He's my friend after all :p
+Worldbuilt: Modulus is an unofficial community project and is not affiliated with the owner of Worldbuilt.
 
 Back up save files before testing unfinished mods. If you even know where the save files are haha.
