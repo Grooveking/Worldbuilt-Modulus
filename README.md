@@ -10,7 +10,7 @@ Worldbuilt: Modulus adds an in-game mod menu and supports ZIP entrypoint mods an
 
 ## Current Version
 
-**0.1.0 MVP**
+**0.2.0 MVP**
 
 ## Features
 
@@ -30,10 +30,8 @@ Worldbuilt: Modulus adds an in-game mod menu and supports ZIP entrypoint mods an
 ## Requirements
 
 - Windows
-- Worldbuilt Alpha 0.1
+- Worldbuilt Alpha 0.2.3 (Available on Itch.io)
 - Mods built for a compatible Godot version
-
-Worldbuilt Alpha 0.1 currently uses Godot 4.7.dev1.
 
 ## Installation
 
